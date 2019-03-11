@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "festivus-application-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/festivus/FestivusApplicationCustomizer.js",
+          "manifest": "./src/extensions/festivus/FestivusApplicationCustomizer.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "FestivusApplicationCustomizerStrings": "lib/extensions/festivus/loc/{locale}.js"
+  }
+}

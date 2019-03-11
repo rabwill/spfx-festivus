@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ClientSideComponentInstance
+        Title="Festivus"
+        Location="ClientSideExtension.ApplicationCustomizer"
+        ComponentId="84fb396f-619d-4b8f-a314-cf3b4efa5c75"
+        Properties="{&quot;testMessage&quot;:&quot;Test message&quot;}">
+    </ClientSideComponentInstance>
+</Elements>
