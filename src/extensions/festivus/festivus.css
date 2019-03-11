@@ -1,0 +1,22 @@
+img.img-festivus {
+    z-index: 1;
+    max-width: 50px;
+    position: absolute;
+  }
+  img.img-festivus.top-right {
+    top: 0px;
+    right: 1330px;
+  }
+  img.img-festivus.top-left {
+    top: -5px;
+    left: 0px;
+  }
+  img.img-festivus.bottom-left {
+    left: 0px;
+    bottom: 15px;
+  }
+  img.img-festivus.bottom-right {
+    right: 1330px;
+    bottom: 15px;
+  }
+  
