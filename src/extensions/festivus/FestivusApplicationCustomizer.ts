@@ -59,7 +59,7 @@ export default class FestivusApplicationCustomizer
         const headers: Headers = new Headers();
         headers.append('accept', 'application/json;odata.metadata=none');
         this.context.spHttpClient
-          .get(`${this.context.pageContext.web.absoluteUrl}/_api/getlistByTitle('Festivus')/items?$select=Active,Direction,FestiveImage&filter=Active eq 1`, SPHttpClient.configurations.v1, {
+          .get(`${this.context.pageContext.web.absoluteUrl}/_api/lists/getByTitle('Festivus')/items?$filter=Active eq 1&select=FestiveImage,Direction,Active`, SPHttpClient.configurations.v1, {
             headers: headers
           })
           .then((res: SPHttpClientResponse): Promise<{ value: any[] }> => {
