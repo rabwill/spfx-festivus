@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "spfx-festivus-client-side-solution",
+    "name": "react-festivus-client-side-solution",
     "id": "014c823b-9056-451b-8c3e-39baed55de0f",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
@@ -21,6 +21,6 @@
     ]
   },
   "paths": {
-    "zippedPackage": "solution/spfx-festivus.sppkg"
+    "zippedPackage": "solution/react-festivus.sppkg"
   }
 }

@@ -29,8 +29,11 @@ export default class FestivusApplicationCustomizer
   }
   @override
   public onInit(): Promise<void> {
-    this.context.application.navigatedEvent.add(this, () => this._addFestivusContents());
-    return;
+    
+    this.context.placeholderProvider.changedEvent.add(this, this._addFestivusContents);
+    this.context.application.navigatedEvent.add(this, this._addFestivusContents);
+    this._addFestivusContents();
+    return Promise.resolve();
   }
   private _onDispose(): void {
     /*
