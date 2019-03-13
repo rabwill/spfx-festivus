@@ -2,11 +2,11 @@
 
 ### Summary
 
-This is a super fun `SPFx application customizer` perfect for the festive season!!
+This is a super fun `SPFx application customizer` just in time for Easter!
 
-Inpired originally by this awesome content [Festivals](https://medium.com/@anoopt/spfx-application-customizer-festivals-953c0a15d12e) by [Anoop](https://medium.com/@anoopt)
+Inspired originally by this awesome content [Festivals](https://medium.com/@anoopt/spfx-application-customizer-festivals-953c0a15d12e) by [Anoop](https://medium.com/@anoopt)
 
-You decorate your office for festivals, now let's decorate your Intranet logo!
+You decorate your office/home for festivals, now let's decorate your Intranet logo!
 
 Have a play around this application customizer to decorate your SharePoint site logo with what you choose and where you choose it to render!
 
@@ -33,7 +33,8 @@ Version|Date|Comments
 **THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.**
 
 ### How it works
-This SPFX application customizer targets the logo element and places the IMAGE of your choice in the DIRECTION of your choice
+This SPFX application customizer targets the logo element and places the IMAGE of your choice in the DIRECTION of your choice relative to the logo
+
 The datasource is a SharePoint list `Festivus` with below columns:
 
 * **FestiveImage** - Picture field
@@ -54,6 +55,10 @@ bottom-left|![festive-list](./images/festivus-hanukkah.png)
 
 
 ####Not really in the festive mood? just leave all list items in-active and it's all back to normal
+
+### What's coming next 
+
+Site scripts for `Festivus` list
 
 ### Building the code
 
