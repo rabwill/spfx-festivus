@@ -2,13 +2,13 @@
 
 ### Summary
 
-This is a super fun `SPFx application customizer` perfect for the festive season!
+This is a super fun `SPFx application customizer` perfect for the festive season!!
 
-Did you want to make your logo look different for a festival so the users can relate more with their intranet.
+Inpired originally by this awesome content [Festivals](https://medium.com/@anoopt/spfx-application-customizer-festivals-953c0a15d12e) by [Anoop](https://medium.com/@anoopt)
 
-Look no further! Have a play around this application customizer to decorate your SharePoint site logo with what you choose and where you choose!
+You decorate your office for festivals, now let's decorate your Intranet logo!
 
-
+Have a play around this application customizer to decorate your SharePoint site logo with what you choose and where you choose it to render!
 
 ## Used SharePoint Framework Version 
 ![1.7.1](https://img.shields.io/badge/version-1.7.1-green.svg)
@@ -33,7 +33,7 @@ Version|Date|Comments
 **THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.**
 
 ### How it works
-This SPFX application customizer targets the logo element and places the IMAGE of you choice in the DIRECTION of your choice
+This SPFX application customizer targets the logo element and places the IMAGE of your choice in the DIRECTION of your choice
 The datasource is a SharePoint list `Festivus` with below columns:
 
 * **FestiveImage** - Picture field
