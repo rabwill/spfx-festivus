@@ -47,10 +47,7 @@ export default class FestivusApplicationCustomizer
     if (this._topPlaceholder.domElement) {
       /* find the element for main div in the logo wrapper
       */
-      const logoElement: any = $("div[class^='logoCell']");
-      /*wait until logo wrapper is rendered
-      */
-      if (logoElement) {
+    
         /* get active festival list item from list Festivus
         */
         const headers: Headers = new Headers();
@@ -73,8 +70,11 @@ export default class FestivusApplicationCustomizer
                   active: fest.Active
                 };
               });
+              const logoElement: any = $("div[class^='logoCell']");
+              /*wait until logo wrapper is rendered
+              */
+             if (this._topPlaceholder && this._topPlaceholder.domElement && logoElement.width()){
               var logoCellWidth = (logoElement.width()) ? parseFloat(logoElement.width()) : 0;
-              if (this._topPlaceholder && this._topPlaceholder.domElement){
               const element: React.ReactElement<IFestivusLogoProps> = React.createElement(
                 FestivusLogo,
                 {
@@ -89,11 +89,12 @@ export default class FestivusApplicationCustomizer
                 Log.info(LOG_SOURCE,`DOM element of the header is undefined. Start to re-render.`);
                 this._addFestivusContents();
               }
-            }
-          },rejected=>{
-            Log.info(LOG_SOURCE,`Error at retrieving the value from Festivus response`);
-          });
-      }
+            
+            
+          }
+      },rejected=>{
+        Log.info(LOG_SOURCE,`Error at retrieving the value from Festivus response`);
+      });
     }
   }
 }
