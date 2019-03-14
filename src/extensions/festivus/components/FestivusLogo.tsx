@@ -5,6 +5,9 @@ export class FestivusLogo extends React.Component<IFestivusLogoProps, {}> {
     constructor(props) {
         super(props);
     }
+    public componentWillUnmount() {
+        console.log('Unmounting the header component.');
+      }
     public render(): React.ReactElement<IFestivusLogoProps> {
         let festivusStyle = {};
         switch (this.props.direction) {

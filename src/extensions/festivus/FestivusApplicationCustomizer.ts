@@ -20,8 +20,7 @@ export interface IFestivusApplicationCustomizerProperties {
 
 /** A Custom Action which can be run during execution of a Client Side Application */
 export default class FestivusApplicationCustomizer
-  extends BaseApplicationCustomizer<IFestivusApplicationCustomizerProperties> {
-  private _retryCount = 0;
+  extends BaseApplicationCustomizer<{IFestivusApplicationCustomizerProperties}> {
   private _topPlaceholder: PlaceholderContent | undefined;
   constructor() {
     super();
@@ -36,9 +35,9 @@ export default class FestivusApplicationCustomizer
     return Promise.resolve();
   }
   private _onDispose(): void {
-    /*
-    Placeholder for dispose
-    */
+    if (this._topPlaceholder && this._topPlaceholder.domElement){
+      ReactDom.unmountComponentAtNode(this._topPlaceholder.domElement);
+    }
   }
   private _addFestivusContents = () => {
 
@@ -51,12 +50,7 @@ export default class FestivusApplicationCustomizer
       const logoElement: any = $("div[class^='logoCell']");
       /*wait until logo wrapper is rendered
       */
-      if (!logoElement) {
-        if (this._retryCount < 50) {
-          this._retryCount++;
-          window.setTimeout(this._addFestivusContents, 3000);
-        }
-      } else {
+      if (logoElement) {
         /* get active festival list item from list Festivus
         */
         const headers: Headers = new Headers();
@@ -80,6 +74,7 @@ export default class FestivusApplicationCustomizer
                 };
               });
               var logoCellWidth = (logoElement.width()) ? parseFloat(logoElement.width()) : 0;
+              if (this._topPlaceholder && this._topPlaceholder.domElement){
               const element: React.ReactElement<IFestivusLogoProps> = React.createElement(
                 FestivusLogo,
                 {
@@ -90,6 +85,10 @@ export default class FestivusApplicationCustomizer
               );
               // render the Festivus logo decoration using a React component
               ReactDom.render(element, this._topPlaceholder.domElement);
+              }else {
+                Log.info(LOG_SOURCE,`DOM element of the header is undefined. Start to re-render.`);
+                this._addFestivusContents();
+              }
             }
           },rejected=>{
             Log.info(LOG_SOURCE,`Error at retrieving the value from Festivus response`);
